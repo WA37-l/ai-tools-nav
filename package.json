@@ -1,0 +1,24 @@
+{
+  "name": "ai-tools-nav",
+  "version": "1.0.0",
+  "description": "AI工具导航 - 全能生产力工具箱",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WA37-l/ai-tools-nav.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WA37-l/ai-tools-nav/issues"
+  },
+  "homepage": "https://github.com/WA37-l/ai-tools-nav#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
