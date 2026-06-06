@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>AI 工具导航 | 全能生产力工具箱</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="description" content="收录全球最全 AI 工具，含详细功能介绍，AI写作、绘画、视频、编程、PDF、设计、汇率一站式导航。" />
+<style>
+:root {
+  --bg:#f5f7fb;--surface:#fff;--border:#e5e7eb;
+  --text:#1f2937;--muted:#6b7280;
+  --accent:#4f46e5;--accent-bg:#eef2ff;
+}
+*{box-sizing:border-box;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI';}
+body{margin:0;background:var(--bg);color:var(--text);}
+.container{max-width:1280px;margin:auto;padding:0 24px;}
+
+/* header */
+header{padding:28px 0;border-bottom:1px solid var(--border);background:var(--surface);}
+header h1{font-size:26px;font-weight:700;}
+header p{color:var(--muted);margin-top:6px;}
+.search input{width:100%;margin-top:18px;padding:12px 18px;border-radius:10px;border:1px solid var(--border);font-size:15px;outline:none;background:var(--bg);}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-bg);}
+
+/* tabs */
+.tabs{display:flex;gap:10px;margin:22px 0;overflow-x:auto;padding-bottom:8px;}
+.tab-btn{padding:8px 18px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;white-space:nowrap;}
+.tab-btn.active,.tab-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+
+/* section */
+.section{display:none;}
+.section.active{display:block;}
+
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;padding-bottom:60px;}
+
+/* card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;transition:.2s;cursor:pointer;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.05);border-color:var(--accent);}
+.icon{width:48px;height:48px;border-radius:12px;margin-bottom:14px;display:grid;place-items:center;font-size:22px;flex-shrink:0;}
+.card-title{font-weight:600;font-size:15px;margin-bottom:6px;}
+.card-title a{color:var(--text);text-decoration:none;}
+.card-desc{font-size:13px;color:var(--muted);line-height:1.5;flex-grow:1;}
+
+/* ===== 广告位样式 ===== */
+.ad-premium{background:linear-gradient(135deg,#eef2ff,#f0f4ff);border:2px dashed #a5b4fc;display:grid;place-items:center;text-align:center;padding:20px;}
+.ad-premium small{color:#6366f1;font-weight:500;}
+.ad-premium b{color:#4f46e5;display:block;margin-top:4px;}
+.ad-general{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+.ad-general small{color:var(--muted);margin-bottom:8px;}
+.ad-general b{color:var(--text);font-weight:600;}
+
+footer{text-align:center;padding:28px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;background:var(--surface);}
+
+@media(max-width:768px){.grid{grid-template-columns:repeat(auto-fill,minmax:220px,1fr));}}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+  <h1>🧰 全能工具导航</h1>
+  <p>AI · PDF · 设计 · 汇率 · 实用小工具（含详细介绍）</p>
+  <div class="search"><input placeholder="搜索工具（AI / PDF / 汇率 / 设计）"></div>
+</header>
+
+<div class="tabs">
+  <button class="tab-btn active" data-t="ai">🤖 AI 工具</button>
+  <button class="tab-btn" data-t="pdf">📄 PDF 工具</button>
+  <button class="tab-btn" data-t="design">🎨 设计资源</button>
+  <button class="tab-btn" data-t="util">💱 汇率 & 小工具</button>
+</div>
+
+<!-- ===== AI 工具（数量回升）===== -->
+<section id="ai" class="section active">
+<div class="grid">
+
+  <!-- 高价值广告位 -->
+  <div class="ad-premium"><small>ADVERTISEMENT</small><b>在此展示您的 AI 产品</b></div>
+  <div class="ad-general"><small>推荐工具</small><b>🚀 提升你的工作效率</b></div>
+
+  <!-- 对话聊天 -->
+  <div class="card"><div class="icon" style="background:#dbeafe;color:#1e40af;">💬</div><div class="card-title"><a href="https://chat.openai.com" target="_blank">ChatGPT</a></div><p class="card-desc">OpenAI 的旗舰模型，擅长逻辑推理、代码编写、内容创作及日常对话。</p></div>
+  <div class="card"><div class="icon" style="background:#ede9fe;color:#5b21b6;">🧠</div><div class="card-title"><a href="https://claude.ai" target="_blank">Claude 3.5</a></div><p class="card-desc">Anthropic 出品，以超长上下文窗口（200K）著称，适合阅读长篇文档。</p></div>
+  <div class="card"><div class="icon" style="background:#fef3c7;color:#92400e;">🌐</div><div class="card-title"><a href="https://gemini.google.com" target="_blank">Gemini</a></div><p class="card-desc">Google 原生多模态模型，不仅能处理文本，还能直接理解和生成图片。</p></div>
+  <div class="card"><div class="icon" style="background:#dcfce7;color:#166534;">🔍</div><div class="card-title"><a href="https://perplexity.ai" target="_blank">Perplexity</a></div><p class="card-desc">AI 对话式搜索引擎，答案附带引用来源链接，非常适合做学术研究。</p></div>
+  <div class="card"><div class="icon" style="background:#fee2e2;color:#991b1b;">📘</div><div class="card-title"><a href="https://www.meta.ai" target="_blank">Meta AI</a></div><p class="card-desc">Meta 推出的 AI 助手，深度集成于 Instagram 和 WhatsApp。</p></div>
+  <div class="card"><div class="icon" style="background:#f0f9ff;color:#0369a1;">🤖</div><div class="card-title"><a href="https://www.anthropic.com" target="_blank">Anthropic</a></div><p class="card-desc">Claude 的母公司，专注于 AI 安全和对齐研究。</p></div>
+  
+  <!-- 绘画设计 -->
+  <div class="card"><div class="icon" style="background:#fce7f3;color:#9d174d;">🎨</div><div class="card-title"><a href="https://midjourney.com" target="_blank">Midjourney</a></div><p class="card-desc">公认的顶级 AI 绘画工具，生成的图片艺术感强、光影细腻。</p></div>
+  <div class="card"><div class="icon" style="background:#e0e7ff;color:#3730a3;">🖌️</div><div class="card-title"><a href="https://leonardo.ai" target="_blank">Leonardo.ai</a></div><p class="card-desc">专注于游戏资产生成，能精确控制角色、道具和场景的纹理。</p></div>
+  <div class="card"><div class="icon" style="background:#fef9c3;color:#854d0e;">🧵</div><div class="card-title"><a href="https://ideogram.ai" target="_blank">Ideogram</a></div><p class="card-desc">目前唯一能稳定生成“准确无拼写错误”英文字母的 AI。</p></div>
+  <div class="card"><div class="icon" style="background:#ccfbf1;color:#134e4a;">🖼️</div><div class="card-title"><a href="https://clipdrop.co" target="_blank">Clipdrop</a></div><p class="card-desc">全能 AI 修图套件，支持一键去除背景、消除路人、无损放大。</p></div>
+  <div class="card"><div class="icon" style="background:#f3e8ff;color:#6b21a8;">🌈</div><div class="card-title"><a href="https://firefly.adobe.com" target="_blank">Firefly</a></div><p class="card-desc">Adobe 出品的商用级 AI，生成的内容可安全用于商业项目。</p></div>
+  <div class="card"><div class="icon" style="background:#fce7f3;color:#9d174d;">🖼️</div><div class="card-title"><a href="https://playgroundai.com" target="_blank">Playground AI</a></div><p class="card-desc">免费且强大的 AI 图像生成器，支持混合多张图片。</p></div>
+
+  <!-- 视频生成 -->
+  <div class="card"><div class="icon" style="background:#ffedd5;color:#9a3412;">🎬</div><div class="card-title"><a href="https://runwayml.com" target="_blank">Runway ML</a></div><p class="card-desc">AI 视频领域的领导者，支持文生视频、图生视频及高级视频编辑。</p></div>
+  <div class="card"><div class="icon" style="background:#dbeafe;color:#1e40af;">📽️</div><div class="card-title"><a href="https://pika.art" target="_blank">Pika Labs</a></div><p class="card-desc">操作极简的 AI 视频生成工具，只需上传图片或输入描述即可生成短视频。</p></div>
+  <div class="card"><div class="icon" style="background:#f0fdf4;color:#14532d;">🎞️</div><div class="card-title"><a href="https://luma.ai" target="_blank">Luma Dream</a></div><p class="card-desc">生成电影级质感的视频，物理运动模拟非常自然。</p></div>
+
+  <!-- 编程开发 -->
+  <div class="card"><div class="icon" style="background:#e0f2fe;color:#0369a1;">👨‍💻</div><div class="card-title"><a href="https://cursor.sh" target="_blank">Cursor</a></div><p class="card-desc">基于 VS Code 的 AI 编辑器，能像结对编程一样与你对话，自动编写代码。</p></div>
+  <div class="card"><div class="icon" style="background:#f1f5f9;color:#334155;">⚡</div><div class="card-title"><a href="https://v0.dev" target="_blank">v0.dev</a></div><p class="card-desc">Vercel 出品，通过自然语言描述 UI 界面，直接生成 React/Tailwind 代码。</p></div>
+  <div class="card"><div class="icon" style="background:#dbeafe;color:#1e40af;">🐙</div><div class="card-title"><a href="https://github.com/features/copilot" target="_blank">Copilot</a></div><p class="card-desc">GitHub 官方插件，在你写代码时实时预测下一行，支持所有主流语言。</p></div>
+  <div class="card"><div class="icon" style="background:#f3e8ff;color:#6b21a8;">🧩</div><div class="card-title"><a href="https://replit.com" target="_blank">Replit</a></div><p class="card-desc">云端 IDE，配合 Ghostwriter AI，直接在浏览器里写代码和运行程序。</p></div>
+
+  <!-- 写作/PPT/办公 -->
+  <div class="card"><div class="icon" style="background:#f3e8ff;color:#6b21a8;">✍️</div><div class="card-title"><a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a></div><p class="card-desc">集成在 Notion 笔记中，帮你总结长文、纠正语法、生成头脑风暴列表。</p></div>
+  <div class="card"><div class="icon" style="background:#fef3c7;color:#92400e;">📊</div><div class="card-title"><a href="https://gamma.app" target="_blank">Gamma</a></div><p class="card-desc">抛弃繁琐的 PPT 排版，输入大纲即可一键生成精美演示文稿。</p></div>
+  <div class="card"><div class="icon" style="background:#fee2e2;color:#991b1b;">📝</div><div class="card-title"><a href="https://copy.ai" target="_blank">Copy.ai</a></div><p class="card-desc">专攻营销文案，能批量生成 Instagram 帖子、Email 营销邮件。</p></div>
+  <div class="card"><div class="icon" style="background:#dcfce7;color:#166534;">📧</div><div class="card-title"><a href="https://jenni.ai" target="_blank">Jenni AI</a></div><p class="card-desc">AI 学术写作助手，帮助学生和研究人员撰写论文、报告和文献综述。</p></div>
+
+  <!-- 音乐/音频/3D -->
+  <div class="card"><div class="icon" style="background:#f0fdf4;color:#166534;">🎵</div><div class="card-title"><a href="https://suno.ai" target="_blank">Suno</a></div><p class="card-desc">输入歌词和风格，即可生成带人声、伴奏且旋律完整的歌曲。</p></div>
+  <div class="card"><div class="icon" style="background:#e0f2fe;color:#0369a1;">🎤</div><div class="card-title"><a href="https://elevenlabs.io" target="_blank">ElevenLabs</a></div><p class="card-desc">最逼真的人声克隆工具，只需 1 分钟样本即可复刻你的声音。</p></div>
+  <div class="card"><div class="icon" style="background:#dbeafe;color:#1e40af;">🧊</div><div class="card-title"><a href="https://lumalabs.ai/genie" target="_blank">Luma Genie</a></div><p class="card-desc">通过文字描述直接生成 3D 模型，可用于游戏开发和 AR/VR 场景。</p></div>
+
+  <!-- 科研/翻译/搜索 -->
+  <div class="card"><div class="icon" style="background:#fce7f3;color:#9d174d;">🔬</div><div class="card-title"><a href="https://consensus.app" target="_blank">Consensus</a></div><p class="card-desc">基于数千万篇学术论文训练的 AI，回答问题时直接引用论文摘要。</p></div>
+  <div class="card"><div class="icon" style="background:#f3f4f6;color:#374151;">🌍</div><div class="card-title"><a href="https://deepl.com" target="_blank">DeepL</a></div><p class="card-desc">公认翻译质量最高的 AI，尤其擅长处理长难句和专业术语。</p></div>
+  <div class="card"><div class="icon" style="background:#f0f9ff;color:#0369a1;">🦾</div><div class="card-title"><a href="https://you.com" target="_blank">You.com</a></div><p class="card-desc">隐私优先的 AI 搜索引擎，提供无广告的个性化搜索结果。</p></div>
+
+  <!-- 综合推荐位 -->
+  <div class="ad-general"><small>合作伙伴</small><b>✨ 发现更多生产力工具</b></div>
+
+</div>
+</section>
+
+<!-- ===== PDF 工具（填满）===== -->
+<section id="pdf" class="section">
+<div class="grid">
+  <div class="ad-premium"><small>SPONSORED</small><b>PDF 工具推广位</b></div>
+  <div class="ad-general"><small>推荐资源</small><b>📁 高效办公必备</b></div>
+
+  <div class="card"><div class="icon" style="background:#dbeafe;color:#1e40af;">📄</div><div class="card-title"><a href="https://www.ilovepdf.com" target="_blank">iLovePDF</a></div><p class="card-desc">功能最全的在线 PDF 套件，支持合并、拆分、压缩、转换、加水印。</p></div>
+  <div class="card"><div class="icon" style="background:#fef3c7;color:#92400e;">📑</div><div class="card-title"><a href="https://smallpdf.com" target="_blank">Smallpdf</a></div><p class="card-desc">界面最简洁优雅的 PDF 工具，专注于核心功能，操作体验极佳。</p></div>
+  <div class="card"><div class="icon" style="background:#f3e8ff;color:#6b21a8;">🗂️</div><div class="card-title"><a href="https://pdfcandy.com" target="_blank">PDF Candy</a></div><p class="card-desc">提供超过 40 种 PDF 操作工具，支持批量处理，无需注册。</p></div>
+  <div class="card"><div class="icon" style="background:#dcfce7;color:#166534;">📁</div><div class="card-title"><a href="https://www.pdf24.org" target="_blank">PDF24</a></div><p class="card-desc">完全免费的 PDF 工具箱，提供在线版和离线桌面版，无广告。</p></div>
+  <div class="card"><div class="icon" style="background:#fee2e2;color:#991b1b;">🔒</div><div class="card-title"><a href="https://www.sejda.com" target="_blank">Sejda PDF</a></div><p class="card-desc">支持直接在浏览器中编辑 PDF 文本、添加链接和表单，功能强大。</p></div>
+  <div class="card"><div class="icon" style="background:#f0f9ff;color:#0369a1;">📝</div><div class="card-title"><a href="https://www.sodapdf.com" target="_blank">Soda PDF</a></div><p class="card-desc">在线查看、编辑和签署 PDF 文件，界面直观，响应速度快。</p></div>
+  <div class="card"><div class="icon" style="background:#fef9c3;color:#854d0e;">📤</div><div class="card-title"><a href="https://convertio.co" target="_blank">Convertio</a></div><p class="card-desc">全能文件转换器，支持 PDF 与 Word、Excel、图片等 300+ 种格式互转。</p></div>
+  <div class="card"><div class="icon" style="background:#f3e8ff;color:#6b21a8;">🔍</div><div class="card-title"><a href="https://www.pdffiller.com" target="_blank">PDFfiller</a></div><p class="card-desc">专业的 PDF 表单填写和电子签名工具，适合合同和法务场景。</p></div>
+</div>
+</section>
+
+<!-- ===== 设计资源 ===== -->
+<section id="design" class="section">
+<div class="grid">
+  <div class="ad-premium"><small>SPONSORED</small><b>设计资源赞助位</b></div>
+  <div class="ad-general"><small>创意工具</small><b>🧩 激发你的创造力</b></div>
+
+  <div class="card"><div class="icon" style="background:#fce7f3;color:#9d174d;">🖼️</div><div class="card-title"><a href="https://unsplash.com" target="_blank">Unsplash</a></div><p class="card-desc">全球最大的免费商用高清图库，照片质量极高，无需署名。</p></div>
+  <div class="card"><div class="icon" style="background:#e0e7ff;color:#3730a3;">🎨</div><div class="card-title"><a href="https://dribbble.com" target="_blank">Dribbble</a></div><p class="card-desc">全球设计师社区，汇集了最前沿的 UI/UX 设计、插画和品牌设计灵感。</p></div>
+  <div class="card"><div class="icon" style="background:#fef9c3;color:#854d0e;">🌈</div><div class="card-title"><a href="https://uigradients.com" target="_blank">UI Gradients</a></div><p class="card-desc">最流行的渐变色生成器，提供数百种预设渐变，一键复制 CSS 代码。</p></div>
+  <div class="card"><div class="icon" style="background:#f3e8ff;color:#6b21a8;">🧩</div><div class="card-title"><a href="https://icons8.com" target="_blank">Icons8</a></div><p class="card-desc">一站式设计资源站，提供图标、插画、照片、音乐和矢量素材。</p></div>
+  <div class="card"><div class="icon" style="background:#dcfce7;color:#166534;">🖌️</div><div class="card-title"><a href="https://www.freepik.com" target="_blank">Freepik</a></div><p class="card-desc">海量免费矢量图、插画和 PSD 源文件，设计师必备素材库。</p></div>
+</div>
+</section>
+
+<!-- ===== 汇率 & 小工具 ===== -->
+<section id="util" class="section">
+<div class="grid">
+  <div class="card" style="grid-column:span 2;">
+    <h3>💱 实时汇率换算</h3>
+    <div style="padding:0;border:none;">
+      <input id="amt" type="number" value="100" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid var(--border);" />
+      <select id="from" style="width:48%;padding:10px;border-radius:8px;border:1px solid var(--border);"></select>
+      <select id="to" style="width:48%;padding:10px;border-radius:8px;border:1px solid var(--border);float:right;"></select>
+      <div class="result" id="res" style="margin-top:16px;text-align:center;font-size:18px;font-weight:600;color:var(--accent);"></div>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px;" id="rateInfo">正在获取汇率...</p>
+    </div>
+  </div>
+
+  <div class="ad-premium"><small>FEATURED</small><b>跨境支付 / 换汇 / 金融服务</b></div>
+  <div class="ad-general"><small>实用工具</small><b>📏 单位换算</b></div>
+  <div class="ad-general"><small>实用工具</small><b>📱 二维码生成</b></div>
+  <div class="ad-general"><small>实用工具</small><b>🔐 Base64 编码</b></div>
+</div>
+</section>
+
+<footer>© 2026 全能工具导航 · 静态广告站 · Vercel 部署版</footer>
+</div>
+
+<script>
+/* tab */
+document.querySelectorAll('.tab-btn').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(b.dataset.t).classList.add('active');
+    if(b.dataset.t==='util') loadRate();
+  };
+});
+
+/* 实时汇率 */
+let rates={};
+const amt=document.getElementById('amt');
+const from=document.getElementById('from');
+const to=document.getElementById('to');
+const res=document.getElementById('res');
+const info=document.getElementById('rateInfo');
+
+async function loadRate(){
+  try{
+    const r=await fetch('https://api.exchangerate.host/latest?base=USD');
+    const j=await r.json();
+    rates=j.rates;
+    fill([j.base,...Object.keys(rates)]);
+    info.textContent='汇率基准：'+j.base+' · '+new Date().toLocaleTimeString();
+    calc();
+  }catch{
+    rates={USD:1,CNY:7.23,EUR:0.92,JPY:154,HKD:7.81,GBP:0.79};
+    fill(['USD','CNY','EUR','JPY','HKD','GBP']);
+    info.textContent='使用内置汇率';
+    calc();
+  }
+}
+function fill(keys){
+  from.innerHTML=to.innerHTML='';
+  keys.forEach(k=>{from.add(new Option(k,k));to.add(new Option(k,k));});
+  from.value='USD';to.value='CNY';
+}
+function calc(){
+  const v=+amt.value||0;
+  const f=from.value,t=to.value;
+  if(!rates[f]||!rates[t]) return;
+  res.textContent=`${v} ${f} = ${(v*(rates[t]/rates[f])).toFixed(4)} ${t}`;
+}
+amt.oninput=calc;from.onchange=calc;to.onchange=calc;
+loadRate();
+</script>
+</body>
+</html>
